@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "7110fad4-aac1-46b5-b3f7-0bf60f61627c",
+    "_postman_id": "38f95a09-3016-4f00-926b-c2d080e7721d",
     "name": "Antiphish",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
@@ -284,7 +284,7 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{url}}/v1/departments?page=1&per-page=10000>; rel=self",
+                      "raw": "{{url}}/v1/departments?page=1&per-page=10000>; rel=self ",
                       "host": [
                         "{{url}}"
                       ],
@@ -875,7 +875,7 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{url}}/v1/targets?page=1&per-page=10000>; rel=self",
+                      "raw": "{{url}}/v1/targets?page=1&per-page=10000>; rel=self ",
                       "host": [
                         "{{url}}"
                       ],
@@ -6019,6 +6019,114 @@
           ],
           "protocolProfileBehavior": {},
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Certs",
+          "item": [
+            {
+              "name": "requests",
+              "item": [
+                {
+                  "name": "Download certificate",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "939c06f2-a21b-449c-8526-b302ff5c4a65",
+                        "exec": [
+                          "//status check",
+                          "",
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});",
+                          "",
+                          "//response content-type check",
+                          "",
+                          "pm.test(\"Response is json.\", function() {",
+                          "    ",
+                          "    pm.response.to.be.json;",
+                          "    ",
+                          "});",
+                          "",
+                          "//department properties check",
+                          "",
+                          "var departmentSchema = {",
+                          "    ",
+                          "    \"type\": \"object\",",
+                          "    ",
+                          "    \"required\" : [\"id\", \"name\"],",
+                          "    ",
+                          "    \"properties\": {",
+                          "        ",
+                          "            \"id\": {\"type\": \"integer\"},",
+                          "            \"name\": {\"type\": \"string\"},",
+                          "            \"rating\": {\"type\": \"integer\"},",
+                          "            \"lastChange\": {\"type\": \"integer\"},",
+                          "            \"targetsCount\": {\"type\": \"integer\"},",
+                          "            \"searchTargets\": {\"type\": \"integer\"},",
+                          "            \"newTargets\": {\"type\": \"integer\"},",
+                          "            \"failedTargets\": {\"type\": \"integer\"},",
+                          "            \"vulnTargets\": {\"type\": \"integer\"}",
+                          "        ",
+                          "        }   ",
+                          "    };",
+                          "",
+                          "var department = JSON.parse(responseBody);",
+                          "",
+                          "pm.test (\"Department properties are correct.\", function() {",
+                          "    ",
+                          "    var SchemeIsCorrect = tv4.validate(department, departmentSchema);",
+                          "        ",
+                          "    pm.expect(SchemeIsCorrect).to.be.true;",
+                          "    ",
+                          "});",
+                          "",
+                          "//department name and id check",
+                          "",
+                          "pm.test(\"Department Name and ID are correct.\", function(){",
+                          "    ",
+                          "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentName\"));",
+                          "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentId\"));",
+                          "    ",
+                          "});"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "{{token}}"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{url}}/v2/certs/51/download",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "v2",
+                        "certs",
+                        "51",
+                        "download"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ],
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
+            }
+          ],
+          "protocolProfileBehavior": {},
+          "_postman_isSubFolder": true
         }
       ],
       "protocolProfileBehavior": {}
@@ -6175,6 +6283,112 @@
               "item": [],
               "protocolProfileBehavior": {},
               "_postman_isSubFolder": true
+            }
+          ],
+          "protocolProfileBehavior": {},
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Email-attak template",
+          "item": [
+            {
+              "name": "requests",
+              "item": [],
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "tests",
+              "item": [],
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "List of Templates",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "fff35163-0481-46a4-9802-117cb02cb7d2",
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/manage/templates",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "manage",
+                    "templates"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Template's information",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "9a8f8de1-6c53-44c0-8580-30a56e01c338",
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/manage/templates/4",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "manage",
+                    "templates",
+                    "4"
+                  ]
+                }
+              },
+              "response": []
             }
           ],
           "protocolProfileBehavior": {},
@@ -6396,106 +6610,665 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Email-attak template",
+          "name": "Cert",
           "item": [
             {
-              "name": "requests",
-              "item": [],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            },
-            {
               "name": "tests",
-              "item": [],
+              "item": [
+                {
+                  "name": "AN-2683",
+                  "item": [
+                    {
+                      "name": "Validate certificate form",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 422\", function () {",
+                              "    pm.response.to.have.status(422);",
+                              "});",
+                              "",
+                              "['file', 'name', 'global_id'].forEach(function(field1) {",
+                              "    pm.test(\"Field \" + field1 + \" correct validated\", function () {",
+                              "        var fields = [];",
+                              "        pm.response.json().forEach(function(field2) {",
+                              "            fields.push(field2.field);",
+                              "        });",
+                              "        pm.expect(fields.includes(field1)).to.eql(true);",
+                              "    });",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "formdata",
+                          "formdata": [
+                            {
+                              "key": "file",
+                              "type": "file",
+                              "src": "/home/user/Downloads/week_3.html",
+                              "disabled": true
+                            },
+                            {
+                              "key": "global_id",
+                              "value": "1234567890",
+                              "type": "text",
+                              "disabled": true
+                            },
+                            {
+                              "key": "name",
+                              "value": "Education certificate",
+                              "type": "text",
+                              "disabled": true
+                            }
+                          ],
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/manage/certs",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Create first cert",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 201\", function () {",
+                              "    pm.response.to.have.status(201);",
+                              "});",
+                              "",
+                              "['id', 'name', 'updated', 'users'].forEach(function(item) {",
+                              "    pm.test(\"Key \" + item + \" exists!\", function () {",
+                              "        var jsonData = pm.response.json();",
+                              "        pm.expect(item in jsonData).to.eql(true);",
+                              "    });",
+                              "});",
+                              "",
+                              "pm.environment.set(\"first_cert_id\", pm.response.json()['id']);",
+                              "",
+                              "function pausecomp(millis)",
+                              " {",
+                              "  var date = new Date();",
+                              "  var curDate = null;",
+                              "  do { curDate = new Date(); }",
+                              "  while(curDate-date < millis);",
+                              "}",
+                              "",
+                              "pausecomp(1000);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "formdata",
+                          "formdata": [
+                            {
+                              "key": "file",
+                              "type": "file",
+                              "src": "/home/user/Downloads/week_3.html"
+                            },
+                            {
+                              "key": "global_id",
+                              "value": "1234567890",
+                              "type": "text"
+                            },
+                            {
+                              "key": "name",
+                              "value": "Education certificate",
+                              "type": "text"
+                            }
+                          ],
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/manage/certs",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Create another cert",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 201\", function () {",
+                              "    pm.response.to.have.status(201);",
+                              "});",
+                              "",
+                              "pm.environment.set(\"last_cert_id\", pm.response.json()['id']);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "formdata",
+                          "formdata": [
+                            {
+                              "key": "file",
+                              "type": "file",
+                              "src": "/home/user/Downloads/week_3.html"
+                            },
+                            {
+                              "key": "global_id",
+                              "value": "0987654321",
+                              "type": "text"
+                            },
+                            {
+                              "key": "name",
+                              "value": "Education certificate N2",
+                              "type": "text"
+                            }
+                          ],
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/manage/certs",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "List certificates",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 200\", function () {",
+                              "    pm.response.to.have.status(200);",
+                              "});",
+                              "",
+                              "pm.test(\"Check first is first\", function () {",
+                              "    pm.expect(pm.response.json()[0]['id'] == pm.environment.get(\"first_cert_id\")).to.eql(true);",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{url}}/manage/certs",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "List certificates (sort)",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 200\", function () {",
+                              "    pm.response.to.have.status(200);",
+                              "});",
+                              "",
+                              "pm.test(\"Check last is first\", function () {",
+                              "    pm.expect(pm.response.json()[0]['id'] == pm.environment.get(\"last_cert_id\")).to.eql(true);",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{url}}/manage/certs?sortBy=updated&sortReverse=true",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs"
+                          ],
+                          "query": [
+                            {
+                              "key": "sortBy",
+                              "value": "updated"
+                            },
+                            {
+                              "key": "sortReverse",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Delete first cert",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 204\", function () {",
+                              "    pm.response.to.have.status(204);",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{url}}/manage/certs/{{first_cert_id}}",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs",
+                            "{{first_cert_id}}"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Delete last cert",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "exec": [
+                              "pm.test(\"Status code is 204\", function () {",
+                              "    pm.response.to.have.status(204);",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "bearer",
+                          "bearer": [
+                            {
+                              "key": "token",
+                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{url}}/manage/certs/{{last_cert_id}}",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "manage",
+                            "certs",
+                            "{{last_cert_id}}"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ],
+                  "protocolProfileBehavior": {},
+                  "_postman_isSubFolder": true
+                }
+              ],
               "protocolProfileBehavior": {},
               "_postman_isSubFolder": true
             },
             {
-              "name": "List of Templates",
-              "event": [
+              "name": "requests",
+              "item": [
                 {
-                  "listen": "test",
-                  "script": {
-                    "id": "fff35163-0481-46a4-9802-117cb02cb7d2",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Status code is 200\", function () {",
-                      "    pm.response.to.have.status(200);",
-                      "});",
-                      ""
-                    ]
-                  }
+                  "name": "Create",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                        "exec": [
+                          "pm.test(\"Status code is 201\", function () {",
+                          "    pm.response.to.have.status(201);",
+                          "});",
+                          "",
+                          "['id', 'name', 'updated', 'users'].forEach(function(item) {",
+                          "    pm.test(\"Key \" + item + \" exists!\", function () {",
+                          "        var jsonData = pm.response.json();",
+                          "        pm.expect(item in jsonData).to.eql(true);",
+                          "    });",
+                          "});",
+                          "",
+                          "pm.environment.set(\"first_cert_id\", pm.response.json()['id']);",
+                          "",
+                          "function pausecomp(millis)",
+                          " {",
+                          "  var date = new Date();",
+                          "  var curDate = null;",
+                          "  do { curDate = new Date(); }",
+                          "  while(curDate-date < millis);",
+                          "}",
+                          "",
+                          "pausecomp(1000);"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "file",
+                          "type": "file",
+                          "src": "/home/user/Downloads/week_3.html"
+                        },
+                        {
+                          "key": "global_id",
+                          "value": "1234567890",
+                          "type": "text"
+                        },
+                        {
+                          "key": "name",
+                          "value": "Education certificate",
+                          "type": "text"
+                        }
+                      ],
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/manage/certs",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "manage",
+                        "certs"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "List",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                        "exec": [
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/manage/certs",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "manage",
+                        "certs"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "View",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                        "exec": [
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/manage/certs/{{first_cert_id}}",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "manage",
+                        "certs",
+                        "{{first_cert_id}}"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Delete",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                        "exec": [
+                          "pm.test(\"Status code is 204\", function () {",
+                          "    pm.response.to.have.status(204);",
+                          "});"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/manage/certs/{{first_cert_id}}",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "manage",
+                        "certs",
+                        "{{first_cert_id}}"
+                      ]
+                    }
+                  },
+                  "response": []
                 }
               ],
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{url}}/manage/templates",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "manage",
-                    "templates"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "Template's information",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "9a8f8de1-6c53-44c0-8580-30a56e01c338",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Status code is 200\", function () {",
-                      "    pm.response.to.have.status(200);",
-                      "});",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{url}}/manage/templates/4",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "manage",
-                    "templates",
-                    "4"
-                  ]
-                }
-              },
-              "response": []
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
             }
           ],
           "protocolProfileBehavior": {},
