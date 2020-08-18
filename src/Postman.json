@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "5ca6fa01-863c-4ce9-86ce-df9656946b34",
-    "name": "Antiphish copy",
+    "_postman_id": "7110fad4-aac1-46b5-b3f7-0bf60f61627c",
+    "name": "Antiphish",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -132,7 +132,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"name\":\"{{departmentName}}\"}"
+                      "raw": "{\"name\":\"{{departmentName}}\"}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/departments",
@@ -406,7 +409,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}"
+                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/departments/{{departmentId}}",
@@ -460,7 +466,10 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": []
+                      "formdata": [],
+                      "options": {
+                        "formdata": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/departments/{{departmentId}}",
@@ -679,7 +688,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"first_name\":\"{{firstName}}\",\"second_name\":\"{{secondName}}\",\"third_name\":\"{{thirdName}}\",\"email\":\"{{email}}@antph.me\",\"status\":0,\"departmentId\":{{departmentId}}}"
+                      "raw": "{\"first_name\":\"{{firstName}}\",\"second_name\":\"{{secondName}}\",\"third_name\":\"{{thirdName}}\",\"email\":\"{{email}}@antph.me\",\"status\":0,\"departmentId\":{{departmentId}}}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/targets",
@@ -1133,7 +1145,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"id\":{{targetId}},\"first_name\":\"{{modifiedFirstName}}\",\"second_name\":\"{{modifiedSecondName}}\",\"third_name\":\"{{modifiedThirdName}}\",\"email\":\"{{modifiedEmail}}@antph.me\",\"status\":1,\"departmentId\":{{departmentId}},\"situation\":{\"status\":1,\"hasVulnerabilities\":false,\"education\":0,\"rating\":10,\"lastChange\":2,\"actions\":[]}}"
+                      "raw": "{\"id\":{{targetId}},\"first_name\":\"{{modifiedFirstName}}\",\"second_name\":\"{{modifiedSecondName}}\",\"third_name\":\"{{modifiedThirdName}}\",\"email\":\"{{modifiedEmail}}@antph.me\",\"status\":1,\"departmentId\":{{departmentId}},\"situation\":{\"status\":1,\"hasVulnerabilities\":false,\"education\":0,\"rating\":10,\"lastChange\":2,\"actions\":[]}}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/targets/{{targetId}}",
@@ -1188,7 +1203,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/targets/{{targetId}}",
@@ -1264,7 +1282,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":0}"
+                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":0}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/education",
@@ -1336,7 +1357,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":{{courseId}}}"
+                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":{{courseId}}}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/education",
@@ -1483,7 +1507,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"targets\":[{{targetId}}]}"
+                      "raw": "{\"targets\":[{{targetId}}]}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v1/attack",
@@ -2019,7 +2046,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"name\": \"{{departmentName}}\"}"
+                      "raw": "{\"name\": \"{{departmentName}}\"}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/departments",
@@ -2303,7 +2333,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}"
+                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/departments/{{departmentId}}",
@@ -2357,7 +2390,10 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": []
+                      "formdata": [],
+                      "options": {
+                        "formdata": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/departments/{{departmentId}}",
@@ -2379,79 +2415,7 @@
             },
             {
               "name": "tests",
-              "item": [
-                {
-                  "name": "AN-2752",
-                  "item": [
-                    {
-                      "name": "Check department rating",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "cdf185a3-a962-4046-aaca-4db7831e6037",
-                            "exec": [
-                              "pm.test(\"Status code is 200\", function () {",
-                              "    pm.response.to.have.status(200);",
-                              "});",
-                              "",
-                              "pm.test(\"Test correct fields\", function () {",
-                              "    pm.expect(\"negativRatingUp\" in pm.response.json()[0]).to.eql(true);",
-                              "    pm.expect(\"negativRatingDown\" in pm.response.json()[0]).to.eql(true);",
-                              "    pm.expect(\"positivRatingUp\" in pm.response.json()[0]).to.eql(true);",
-                              "    pm.expect(\"positivRatingDown\" in pm.response.json()[0]).to.eql(true);",
-                              "    pm.expect(\"hasNotChanged\" in pm.response.json()[0]).to.eql(true);",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "HcGDuguoyfhNumAyqUL5ovfj1W15ge",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "{{url}}/v2/departments?page=1&per-page=10000>; rel=self&rating=1",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "departments"
-                          ],
-                          "query": [
-                            {
-                              "key": "page",
-                              "value": "1"
-                            },
-                            {
-                              "key": "per-page",
-                              "value": "10000>; rel=self"
-                            },
-                            {
-                              "key": "rating",
-                              "value": "1"
-                            }
-                          ]
-                        }
-                      },
-                      "response": []
-                    }
-                  ],
-                  "protocolProfileBehavior": {},
-                  "_postman_isSubFolder": true
-                }
-              ],
+              "item": [],
               "protocolProfileBehavior": {},
               "_postman_isSubFolder": true
             }
@@ -2725,7 +2689,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"fullName\":\"{{firstName}} {{secondName}} {{thirdName}}\",\"firstName\":\"{{firstName}}\",\"secondName\":\"{{secondName}}\",\"thirdName\":\"{{thirdName}}\",\"position\":\"{{position}}\",\"email\":\"{{email}}@antph.me\",\"department\":{\"id\":{{departmentId}},\"name\":\"{{departmentName}}\"},\"marks\":[\"{{mark_name_1}}\", \"{{mark_name_2}}\", \"{{mark_name_3}}\", \"{{mark_name_4}}\"]}"
+                      "raw": "{\"fullName\":\"{{firstName}} {{secondName}} {{thirdName}}\",\"firstName\":\"{{firstName}}\",\"secondName\":\"{{secondName}}\",\"thirdName\":\"{{thirdName}}\",\"position\":\"{{position}}\",\"email\":\"{{email}}@antph.me\",\"department\":{\"id\":{{departmentId}},\"name\":\"{{departmentName}}\"},\"marks\":[\"{{mark_name_1}}\", \"{{mark_name_2}}\", \"{{mark_name_3}}\", \"{{mark_name_4}}\"]}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/targets",
@@ -2999,7 +2966,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/targets/{{targetId}}",
@@ -3269,7 +3239,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"name\":\"{{attackName}}\",\"subject\":\"{{subjectName}}\",\"fromName\":\"{{senderName}}\",\"from\":\"{{senderEmail}}\",\"domain\":\"antiphish.ru\",\"domainInLinks\":null,\"text\":\"<p>{{emailText}}</p>\",\"targetsCount\":null,\"sendAttachment\":true,\"attachment\":{\"id\":22,\"name\":\"blank\",\"type\":\"xlsx\"},\"attachmentFakeName\":null,\"phishingPage\":{\"id\":3,\"title\":\"Аутенфикация Atlassian JIRA\"},\"finalPage\":null,\"template\":null,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}"
+                      "raw": "{\"name\":\"{{attackName}}\",\"subject\":\"{{subjectName}}\",\"fromName\":\"{{senderName}}\",\"from\":\"{{senderEmail}}\",\"domain\":\"antiphish.ru\",\"domainInLinks\":null,\"text\":\"<p>{{emailText}}</p>\",\"targetsCount\":null,\"sendAttachment\":true,\"attachment\":{\"id\":22,\"name\":\"blank\",\"type\":\"xlsx\"},\"attachmentFakeName\":null,\"phishingPage\":{\"id\":3,\"title\":\"Аутенфикация Atlassian JIRA\"},\"finalPage\":null,\"template\":null,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns",
@@ -3528,7 +3501,10 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": []
+                      "formdata": [],
+                      "options": {
+                        "formdata": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/delete?deleteStatistics=0",
@@ -3570,7 +3546,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{}"
+                      "raw": "{}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/restore",
@@ -3624,7 +3603,10 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": []
+                      "formdata": [],
+                      "options": {
+                        "formdata": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/delete?deleteStatistics=1",
@@ -4014,7 +3996,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"courseId\":{{courseId}},\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}"
+                      "raw": "{\"courseId\":{{courseId}},\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/learning/sendToTraining",
@@ -4067,7 +4052,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"courseId\":0,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}"
+                      "raw": "{\"courseId\":0,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/learning/sendToTraining",
@@ -4239,7 +4227,1101 @@
             },
             {
               "name": "tests",
-              "item": [],
+              "item": [
+                {
+                  "name": "AN-1915",
+                  "item": [
+                    {
+                      "name": "Create Department",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "27bcce95-d509-4d69-b78b-bac26dccacd8",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 201.\", function () {",
+                              "    ",
+                              "    pm.response.to.have.status(201);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function() {",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              "",
+                              "//get departmentId to variable",
+                              "",
+                              "try {",
+                              "    ",
+                              "    pm.environment.set(\"departmentId\", pm.response.json().id);",
+                              "    ",
+                              "} catch(e) {",
+                              "    ",
+                              "    console.log(e);",
+                              "    ",
+                              "}",
+                              "",
+                              "//department properties check",
+                              "",
+                              "var departmentScheme = {",
+                              "    ",
+                              "    \"type\": \"object\",",
+                              "    ",
+                              "    \"required\" : [\"id\", \"name\"],",
+                              "    ",
+                              "    \"properties\": {",
+                              "        ",
+                              "        \"id\": {\"type\": \"integer\"},",
+                              "        \"name\": {\"type\": \"string\"},",
+                              "        \"rating\": {\"type\": \"null\"},",
+                              "        \"lastChange\": {\"type\": \"null\"},",
+                              "        \"targetsCount\": {\"type\": \"integer\"},",
+                              "        \"searchTargets\": {\"type\": \"integer\"},",
+                              "        \"newTargets\": {\"type\": \"integer\"},",
+                              "        \"failedTargets\": {\"type\": \"integer\"},",
+                              "        \"vulnTargets\": {\"type\": \"integer\"}",
+                              "        ",
+                              "    }   ",
+                              "    ",
+                              "};",
+                              "",
+                              "var department = JSON.parse(responseBody);",
+                              "",
+                              "pm.test (\"Department properties are correct.\", function() {",
+                              "    ",
+                              "    var SchemeIsCorrect = tv4.validate(department, departmentScheme);",
+                              "        ",
+                              "    pm.expect(SchemeIsCorrect).to.be.true;",
+                              "    ",
+                              "});",
+                              "",
+                              "//check department name",
+                              "",
+                              "pm.test(\"Department Name is correct.\", function(){",
+                              "    ",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentName\"));",
+                              "    ",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "7381ed0e-a556-4640-a7b6-f2671771240e",
+                            "exec": [
+                              "//get random department name",
+                              "",
+                              "var department_name = \"Отдел \";",
+                              "var department_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,./?\";",
+                              "",
+                              "    for( var i=0; i < 15; i++ ) {",
+                              "    ",
+                              "        department_name += department_name_charset.charAt(Math.floor(Math.random() * department_name_charset.length));",
+                              "    ",
+                              "    }",
+                              "    ",
+                              "postman.setEnvironmentVariable(\"departmentName\", department_name);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"name\": \"{{departmentName}}\"}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/departments",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "departments"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Create Target",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 201.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(201);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              "",
+                              "//get targetId to variable",
+                              "",
+                              "try {",
+                              "    ",
+                              "    pm.environment.set(\"targetId\", pm.response.json().id);",
+                              "    ",
+                              "} catch(e) {",
+                              "    ",
+                              "    console.log(e);",
+                              "    ",
+                              "}",
+                              "",
+                              "//target properties check",
+                              "",
+                              "var targetScheme = {",
+                              "    ",
+                              "    \"type\": \"object\",",
+                              "    ",
+                              "    \"required\" : [\"id\", \"fullName\", \"firstName\", \"secondName\", \"email\", \"department\"],",
+                              "    ",
+                              "    \"properties\": {",
+                              "        ",
+                              "        \"id\": {\"type\": \"integer\"},",
+                              "        \"fullName\": {\"type\": \"string\"},",
+                              "        \"firstName\": {\"type\": \"string\"},",
+                              "        \"secondName\": {\"type\": \"string\"},",
+                              "        \"thirdName\": {\"type\": \"string\"},",
+                              "        \"position\": {\"type\": \"string\"},",
+                              "        \"email\": {\"type\": \"string\"},",
+                              "        \"status\": {\"type\": \"null\"},",
+                              "        \"department\": {",
+                              "            ",
+                              "            \"type\": \"object\",",
+                              "            \"properties\": {",
+                              "                ",
+                              "              \"id\": {\"type\": \"integer\"},",
+                              "              \"name\": {\"type\": \"string\"}",
+                              "              ",
+                              "            }",
+                              "            ",
+                              "        },",
+                              "        ",
+                              "        \"situation\": {",
+                              "            ",
+                              "            \"type\": \"object\",",
+                              "            \"properties\": {",
+                              "                ",
+                              "                \"status\": {\"type\": \"null\"},",
+                              "                \"hasVulnerabilities\": {\"type\": \"boolean\"},",
+                              "                \"education\": {\"type\": \"integer\"},",
+                              "                \"rating\": {\"type\": \"null\"},",
+                              "                \"lastChange\": {\"type\": \"null\"},",
+                              "                \"actions\": {",
+                              "                    ",
+                              "                    \"type\": \"array\",",
+                              "                    \"items\": {\"type\": \"string\"}",
+                              "                    ",
+                              "                }",
+                              "                ",
+                              "            }",
+                              "            ",
+                              "        },",
+                              "        ",
+                              "        \"marks\": {",
+                              "            ",
+                              "            \"type\": \"array\",",
+                              "            \"items\": {\"type\": \"string\"}",
+                              "            ",
+                              "        }",
+                              "        ",
+                              "    }",
+                              "    ",
+                              "};",
+                              "",
+                              "var target = JSON.parse(responseBody);",
+                              "",
+                              "pm.test (\"Target properties are correct.\", function() {",
+                              "    ",
+                              "    var SchemeIsCorrect = tv4.validate(target, targetScheme);",
+                              "        ",
+                              "    pm.expect(SchemeIsCorrect).to.be.true;",
+                              "    ",
+                              "});",
+                              "",
+                              "//check target fullName, firstName, secondName, thirdName, position, email, department, marks",
+                              "",
+                              "pm.test(\"Target is correct.\", function(){",
+                              "    ",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"firstName\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"secondName\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"thirdName\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"position\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentName\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_1\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_2\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_3\"));",
+                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_4\"));",
+                              "   ",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              "//get random first name",
+                              "",
+                              "var first_name = \"\";",
+                              "var first_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 15; i++ ) {",
+                              "        first_name += first_name_charset.charAt(Math.floor(Math.random() * first_name_charset.length));",
+                              "    }",
+                              "    ",
+                              "postman.setEnvironmentVariable(\"firstName\", first_name);",
+                              "",
+                              "//get random second name",
+                              "",
+                              "var second_name = \"\";",
+                              "var second_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 15; i++ ) {",
+                              "    ",
+                              "        second_name += second_name_charset.charAt(Math.floor(Math.random() * second_name_charset.length));",
+                              "    ",
+                              "    }",
+                              "    ",
+                              "postman.setEnvironmentVariable(\"secondName\", second_name);",
+                              "",
+                              "//get random third name",
+                              "",
+                              "var third_name = \"\";",
+                              "var third_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 15; i++ ) {",
+                              "    ",
+                              "        third_name += third_name_charset.charAt(Math.floor(Math.random() * third_name_charset.length));",
+                              "    ",
+                              "    }",
+                              "",
+                              "postman.setEnvironmentVariable(\"thirdName\", third_name);",
+                              "",
+                              "//get random email",
+                              "",
+                              "var email_name = \"A.b.C.d\";",
+                              "var email_name_charset = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-_\";",
+                              "",
+                              "    for( var i=0; i < 15; i++ ) {",
+                              "    ",
+                              "        email_name += email_name_charset.charAt(Math.floor(Math.random() * email_name_charset.length));",
+                              "    ",
+                              "    }",
+                              "",
+                              "postman.setEnvironmentVariable(\"email\", email_name);",
+                              "",
+                              "//get random position",
+                              "",
+                              "var position_name = \"Менеджер \";",
+                              "var position_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 15; i++ ) {",
+                              "    ",
+                              "        position_name += position_name_charset.charAt(Math.floor(Math.random() * position_name_charset.length));",
+                              "    ",
+                              "    }",
+                              "",
+                              "postman.setEnvironmentVariable(\"position\", position_name);",
+                              "",
+                              "//get random marks",
+                              "",
+                              "var mark_name_1 = \"\";",
+                              "var mark_name_1_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 3; i++ ) {",
+                              "    ",
+                              "        mark_name_1 += mark_name_1_charset.charAt(Math.floor(Math.random() * mark_name_1_charset.length));",
+                              "    ",
+                              "    }",
+                              "    ",
+                              "var mark_name_2 = \"\";",
+                              "var mark_name_2_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 9; i++ ) {",
+                              "    ",
+                              "        mark_name_2 += mark_name_2_charset.charAt(Math.floor(Math.random() * mark_name_2_charset.length));",
+                              "    ",
+                              "    }",
+                              "    ",
+                              "var mark_name_3 = \"\";",
+                              "var mark_name_3_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 5; i++ ) {",
+                              "    ",
+                              "        mark_name_3 += mark_name_3_charset.charAt(Math.floor(Math.random() * mark_name_3_charset.length));",
+                              "    ",
+                              "    }",
+                              "    ",
+                              "var mark_name_4 = \"\";",
+                              "var mark_name_4_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
+                              "",
+                              "    for( var i=0; i < 1; i++ ) {",
+                              "    ",
+                              "        mark_name_4 += mark_name_4_charset.charAt(Math.floor(Math.random() * mark_name_4_charset.length));",
+                              "    ",
+                              "    }",
+                              "",
+                              "postman.setEnvironmentVariable(\"mark_name_1\", mark_name_1);",
+                              "postman.setEnvironmentVariable(\"mark_name_2\", mark_name_2);",
+                              "postman.setEnvironmentVariable(\"mark_name_3\", mark_name_3);",
+                              "postman.setEnvironmentVariable(\"mark_name_4\", mark_name_4);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"fullName\":\"{{firstName}} {{secondName}} {{thirdName}}\",\"firstName\":\"{{firstName}}\",\"secondName\":\"{{secondName}}\",\"thirdName\":\"{{thirdName}}\",\"position\":\"{{position}}\",\"email\":\"{{email}}@antph.me\",\"department\":{\"id\":{{departmentId}},\"name\":\"{{departmentName}}\"},\"marks\":[\"{{mark_name_1}}\", \"{{mark_name_2}}\", \"{{mark_name_3}}\", \"{{mark_name_4}}\"]}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/targets",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "targets"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Try to  get link. No Appointment, No self-appointment courses",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 422.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(422);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{eduUrl}}/edu/auth",
+                          "host": [
+                            "{{eduUrl}}"
+                          ],
+                          "path": [
+                            "edu",
+                            "auth"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Get Course List",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "try {",
+                              "    pm.environment.set(\"courseId\", pm.response.json()[0].id);",
+                              "} catch(e) {",
+                              "    ",
+                              "    console.log(e);",
+                              "    ",
+                              "}"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/courses?page=1&per-page=20",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "courses"
+                          ],
+                          "query": [
+                            {
+                              "key": "page",
+                              "value": "1"
+                            },
+                            {
+                              "key": "per-page",
+                              "value": "20"
+                            }
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Get Course",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "try {",
+                              "    pm.environment.set(\"courseName\", pm.response.json().name);",
+                              "    pm.environment.set(\"courseStatus\", pm.response.json().status);",
+                              "    pm.environment.set(\"coursePass_score\", pm.response.json().pass_score);",
+                              "    pm.environment.set(\"courseAllow_self_appointment\", pm.response.json().allow_self_appointment);",
+                              "} catch(e) {",
+                              "    ",
+                              "    console.log(e);",
+                              "    ",
+                              "}"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/courses/{{courseId}}",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "courses",
+                            "{{courseId}}"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Edit Course (Add self_appointment)",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 200.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(200);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              "pm.environment.set(\"courseAllow_self_appointment\", true);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"id\":{{courseId}},\"name\":\"{{courseName}}\",\"status\":{{courseStatus}},\"pass_score\":{{coursePass_score}},\"allow_self_appointment\":{{courseAllow_self_appointment}},\"prev_stat\":null,\"prev_dynamic\":null}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/courses/{{courseId}}",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "courses",
+                            "{{courseId}}"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Try to  get link. Self-appointment course only",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 200.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(200);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{eduUrl}}/edu/auth",
+                          "host": [
+                            "{{eduUrl}}"
+                          ],
+                          "path": [
+                            "edu",
+                            "auth"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Edit Course (Remove self_appointment)",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "a595613a-7dc8-4043-ba06-4d3536ac9602",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 200.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(200);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              "",
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "cbd04353-a061-45a3-b1b2-10d8b73df9db",
+                            "exec": [
+                              "pm.environment.set(\"courseAllow_self_appointment\", false);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"id\":{{courseId}},\"name\":\"{{courseName}}\",\"status\":{{courseStatus}},\"pass_score\":{{coursePass_score}},\"allow_self_appointment\":{{courseAllow_self_appointment}},\"prev_stat\":null,\"prev_dynamic\":null}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/courses/{{courseId}}",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "courses",
+                            "{{courseId}}"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Try to  get link. No Appointment, No self-appointment courses Copy",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 422.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(422);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{eduUrl}}/edu/auth",
+                          "host": [
+                            "{{eduUrl}}"
+                          ],
+                          "path": [
+                            "edu",
+                            "auth"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Send to  training",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "c278bfbf-1ca3-4e72-943f-fd2ec60a6634",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 200.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(200);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "bdf2f1d2-0c5a-448b-90c2-ec351d0d6e12",
+                            "exec": [
+                              "pm.environment.set(\"courseAllow_self_appointment\", false);"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"courseId\":{{courseId}},\"selectedData\":{\"search\":[\"\"],\"all\":false,\"departments\":[{{departmentId}}],\"departmentsUsed\":[],\"targets\":[],\"unselectedDepartments\":[],\"unselectedTargets\":[],\"courses\":[],\"selectedCount\":{\"targets\":1,\"departments\":1},\"$promise\":{},\"$resolved\":true},\"learningConfig\":{\"timeValue\":3,\"timePeriod\":\"day\"}}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{url}}/v2/learning/sendToTraining",
+                          "host": [
+                            "{{url}}"
+                          ],
+                          "path": [
+                            "v2",
+                            "learning",
+                            "sendToTraining"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "Try to  get link. Target on training",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                            "exec": [
+                              "//status check",
+                              "",
+                              "pm.test(\"Status code is 200.\", function () {",
+                              "",
+                              "    pm.response.to.have.status(200);",
+                              "    ",
+                              "});",
+                              "",
+                              "//response content-type check",
+                              "",
+                              "pm.test(\"Response is json.\", function(){",
+                              "    ",
+                              "    pm.response.to.be.json;",
+                              "    ",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
+                          "options": {
+                            "raw": {}
+                          }
+                        },
+                        "url": {
+                          "raw": "{{eduUrl}}/edu/auth",
+                          "host": [
+                            "{{eduUrl}}"
+                          ],
+                          "path": [
+                            "edu",
+                            "auth"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ],
+                  "protocolProfileBehavior": {},
+                  "_postman_isSubFolder": true
+                }
+              ],
               "protocolProfileBehavior": {},
               "_postman_isSubFolder": true
             }
@@ -4298,7 +5380,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/start",
@@ -4357,7 +5442,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "",
+                      "options": {
+                        "raw": {}
+                      }
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/pause",
@@ -4810,7 +5898,10 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"password\":\"{{userPassword}}\",\"username\":\"{{userLogin}}\"}"
+                  "raw": "{\"password\":\"{{userPassword}}\",\"username\":\"{{userLogin}}\"}",
+                  "options": {
+                    "raw": {}
+                  }
                 },
                 "url": {
                   "raw": "{{url}}/v2/auth",
@@ -4935,506 +6026,6 @@
     {
       "name": "Manage",
       "item": [
-        {
-          "name": "Roles",
-          "item": [
-            {
-              "name": "tests",
-              "item": [
-                {
-                  "name": "AN-995",
-                  "item": [
-                    {
-                      "name": "Create role",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "d2e90c25-31da-4b7d-aaa2-9342297dee74",
-                            "exec": [
-                              "//status check",
-                              "pm.test(\"Status code is 201.\", function () {",
-                              "    pm.response.to.have.status(201);",
-                              "});",
-                              "//response content-type check",
-                              "pm.test(\"Response is json.\", function() {",
-                              "    pm.response.to.be.json;",
-                              "});",
-                              "//get id to variable",
-                              "try {",
-                              "    pm.environment.set(\"roleId\", pm.response.json().id);",
-                              "} catch(e) {",
-                              "    console.log(e);",
-                              "}",
-                              "// properties check",
-                              "var scheme = {",
-                              "    \"type\": \"object\",",
-                              "    \"required\" : [\"id\", \"name\", \"page\"],",
-                              "    \"properties\": {",
-                              "        \"id\": {\"type\": \"integer\"},",
-                              "        \"name\": {\"type\": \"string\"},",
-                              "        \"page\": {\"type\": \"string\"},",
-                              "        \"status\": {\"type\": \"integer\"},",
-                              "        \"default\": {\"type\": \"integer\"},",
-                              "        \"access\": {\"type\": \"integer\"},",
-                              "        \"sections\": {\"type\": \"array\"},",
-                              "    }   ",
-                              "};",
-                              "var object = JSON.parse(responseBody);",
-                              "pm.test (\"Role properties are correct.\", function() {",
-                              "    var schemeIsCorrect = tv4.validate(object, scheme);",
-                              "    pm.expect(schemeIsCorrect).to.be.true;",
-                              "});",
-                              "//check name",
-                              "pm.test(\"Role name is correct.\", function(){",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleName\"));",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "2a771832-b0d4-4864-89a4-f1a876da6aab",
-                            "exec": [
-                              "//get random name",
-                              "var roleName = \"Роль \";",
-                              "var roleNameCharset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,./?\";",
-                              "for( var i=0; i < 15; i++ ) {",
-                              "    roleName += roleNameCharset.charAt(Math.floor(Math.random() * roleNameCharset.length));",
-                              "}",
-                              "postman.setEnvironmentVariable(\"roleName\", roleName);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "{{manageToken}}",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"name\": \"{{roleName}}\", \"page\": \"managers\"}"
-                        },
-                        "url": {
-                          "raw": "{{manageUrl}}/v1/roles",
-                          "host": [
-                            "{{manageUrl}}"
-                          ],
-                          "path": [
-                            "v1",
-                            "roles"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Info about role after creation",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "9dbb3e55-a91e-4d91-814e-d71be3438cf1",
-                            "exec": [
-                              "//status check",
-                              "pm.test(\"Status code is 200\", function() {",
-                              "    pm.response.to.have.status(200);",
-                              "});",
-                              "//response content-type check",
-                              "pm.test(\"Response is json.\", function() {",
-                              "    pm.response.to.be.json;",
-                              "});",
-                              "// properties check",
-                              "var schema = {",
-                              "    \"type\": \"object\",",
-                              "    \"required\": [\"id\", \"name\", \"page\"],",
-                              "    \"properties\": {",
-                              "        \"id\": {\"type\": \"integer\"},",
-                              "        \"name\": {\"type\": \"string\"},",
-                              "        \"page\": {\"type\": \"string\"},",
-                              "        \"status\": {\"type\": \"integer\"},",
-                              "        \"default\": {\"type\": \"integer\"},",
-                              "        \"access\": {\"type\": \"integer\"},",
-                              "        \"sections\": {\"type\": \"array\"},",
-                              "    }",
-                              "};",
-                              "var object = JSON.parse(responseBody);",
-                              "pm.test(\"Role properties are correct.\", function() {",
-                              "    var schemeIsCorrect = tv4.validate(object, schema);",
-                              "    pm.expect(schemeIsCorrect).to.be.true;",
-                              "});",
-                              "// name and id check",
-                              "pm.test(\"Role name and ID are correct.\", function() {",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleId\"));",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "{{manageToken}}",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json",
-                            "type": "text"
-                          }
-                        ],
-                        "url": {
-                          "raw": "{{manageUrl}}/v1/roles/{{roleId}}",
-                          "host": [
-                            "{{manageUrl}}"
-                          ],
-                          "path": [
-                            "v1",
-                            "roles",
-                            "{{roleId}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "List of roles",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "50516cc3-7a75-4e48-9b7c-c6e552365590",
-                            "exec": [
-                              "//status check",
-                              "pm.test(\"Status code is 200\", function () {",
-                              "    pm.response.to.have.status(200);",
-                              "});",
-                              "//response content-type check",
-                              "pm.test(\"Response is json.\", function() {",
-                              "    pm.response.to.be.json;",
-                              "});",
-                              "// name and id check",
-                              "pm.test(\"Role name and ID are correct and displayed in role's list.\", function(){",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleId\"));",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "{{manageToken}}",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "url": {
-                          "raw": "{{manageUrl}}/v1/roles?page=1&per-page=10000>; rel=self",
-                          "host": [
-                            "{{manageUrl}}"
-                          ],
-                          "path": [
-                            "v1",
-                            "roles"
-                          ],
-                          "query": [
-                            {
-                              "key": "page",
-                              "value": "1"
-                            },
-                            {
-                              "key": "per-page",
-                              "value": "10000>; rel=self"
-                            }
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Modify role",
-                      "event": [
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "778f0b89-ed6b-48db-8e83-dc2918cd5154",
-                            "exec": [
-                              "//get random modified name",
-                              "var modifiedRoleName = \"Роль номер два с именем \";",
-                              "var modifiedRoleNameCharset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,./?\";",
-                              "",
-                              "for( var i=0; i < 15; i++ ) {",
-                              "    modifiedRoleName += modifiedRoleNameCharset.charAt(Math.floor(Math.random() * modifiedRoleNameCharset.length));",
-                              "}",
-                              "postman.setEnvironmentVariable(\"modifiedRoleName\", modifiedRoleName);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "872fc928-162b-47ab-8b8c-2590f17e0211",
-                            "exec": [
-                              "//status check",
-                              "pm.test(\"Status code is 200.\", function () {",
-                              "    pm.response.to.have.status(200);",
-                              "});",
-                              "//response content-type check",
-                              "pm.test(\"Response is json.\", function() {",
-                              "    pm.response.to.be.json;",
-                              "});",
-                              "// properties check",
-                              "var scheme = {",
-                              "    \"type\": \"object\",",
-                              "    \"required\" : [\"id\", \"name\", \"page\"],",
-                              "    \"properties\": {",
-                              "        \"id\": {\"type\": \"integer\"},",
-                              "        \"name\": {\"type\": \"string\"},",
-                              "        \"page\": {\"type\": \"string\"},",
-                              "        \"status\": {\"type\": \"integer\"},",
-                              "        \"default\": {\"type\": \"integer\"},",
-                              "        \"access\": {\"type\": \"integer\"},",
-                              "        \"sections\": {\"type\": \"array\"},",
-                              "    }   ",
-                              "};",
-                              "var object = JSON.parse(responseBody);",
-                              "pm.test (\"Role properties are correct.\", function() {",
-                              "    var schemeIsCorrect = tv4.validate(object, scheme);",
-                              "    pm.expect(schemeIsCorrect).to.be.true;",
-                              "});",
-                              "//check name",
-                              "pm.test(\"Role name is correct.\", function(){",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"modifiedRoleName\"));",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "{{manageToken}}",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"id\":{{roleId}},\"name\":\"{{modifiedRoleName}}\"}"
-                        },
-                        "url": {
-                          "raw": "{{manageUrl}}/v1/roles/{{roleId}}",
-                          "host": [
-                            "{{manageUrl}}"
-                          ],
-                          "path": [
-                            "v1",
-                            "roles",
-                            "{{roleId}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Delete role",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "a760236f-1ddf-4477-8f51-5d0d083112ac",
-                            "exec": [
-                              "//status check",
-                              "pm.test(\"Status code is 204\", function () {",
-                              "    pm.response.to.have.status(204);",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "{{manageToken}}",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "formdata",
-                          "formdata": []
-                        },
-                        "url": {
-                          "raw": "{{manageUrl}}/v1/roles/{{roleId}}",
-                          "host": [
-                            "{{manageUrl}}"
-                          ],
-                          "path": [
-                            "v1",
-                            "roles",
-                            "{{roleId}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    }
-                  ],
-                  "description": "Roles",
-                  "protocolProfileBehavior": {},
-                  "_postman_isSubFolder": true
-                }
-              ],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "requests",
-              "item": [
-                {
-                  "name": "AN-995",
-                  "item": [
-                    {
-                      "name": "List of roles",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "172834ca-cc5a-4016-a0ca-31ea86176408",
-                            "exec": [
-                              "//status check",
-                              "pm.test(\"Status code is 200\", function () {",
-                              "    pm.response.to.have.status(200);",
-                              "});",
-                              "//response content-type check",
-                              "pm.test(\"Response is json.\", function() {",
-                              "    pm.response.to.be.json;",
-                              "});",
-                              "// name and id check",
-                              "pm.test(\"Role name and ID are correct and displayed in role's list.\", function(){",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"roleId\"));",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "{{manageToken}}",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "url": {
-                          "raw": "{{manageUrl}}/v1/roles?page=1&per-page=10000>; rel=self",
-                          "host": [
-                            "{{manageUrl}}"
-                          ],
-                          "path": [
-                            "v1",
-                            "roles"
-                          ],
-                          "query": [
-                            {
-                              "key": "page",
-                              "value": "1"
-                            },
-                            {
-                              "key": "per-page",
-                              "value": "10000>; rel=self"
-                            }
-                          ]
-                        }
-                      },
-                      "response": []
-                    }
-                  ],
-                  "protocolProfileBehavior": {},
-                  "_postman_isSubFolder": true
-                }
-              ],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            }
-          ],
-          "protocolProfileBehavior": {},
-          "_postman_isSubFolder": true
-        },
         {
           "name": "Attachment",
           "item": [
