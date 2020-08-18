@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "38f95a09-3016-4f00-926b-c2d080e7721d",
-    "name": "Antiphish",
+    "_postman_id": "7bfa0d0c-0bb9-47dc-9a5a-ca9152a1a088",
+    "name": "Antiphish copy",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -20,7 +20,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "7ce847a7-a707-45a0-ae74-3cbeff11d635",
+                        "id": "b6a27dce-fd83-4455-8ff8-01a884fd4082",
                         "exec": [
                           "//get random department name",
                           "",
@@ -41,7 +41,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "07026a2c-6a4e-48fb-bf0c-c4a979fdb216",
+                        "id": "c7d2b1d7-fd9d-420c-84c3-6bba5757c77f",
                         "exec": [
                           "//status check",
                           "",
@@ -132,10 +132,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"name\":\"{{departmentName}}\"}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"name\":\"{{departmentName}}\"}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/departments",
@@ -156,7 +153,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "19858b12-d3a5-4dfc-a5c9-68eb8f11b1bd",
+                        "id": "0b4b718b-4b9f-47db-a36d-9c71614cbca0",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -244,7 +241,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "7f4809bd-48df-4c8e-b108-184c93cbca83",
+                        "id": "6523af5d-2abb-4366-ac2f-bfcfcd37acc8",
                         "exec": [
                           "//status check",
                           "",
@@ -312,7 +309,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "72fc2c24-856a-49eb-a40a-b621b258fa70",
+                        "id": "f5b595b1-498b-4911-ba05-21a0408f36f6",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -373,7 +370,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "bc6bbd38-67fd-409c-b4d3-164c7d117c32",
+                        "id": "13e18526-7529-4be9-8191-e12cffbf805c",
                         "type": "text/javascript",
                         "exec": [
                           "//get random modified department name",
@@ -409,10 +406,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/departments/{{departmentId}}",
@@ -434,7 +428,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "aff59b85-88d8-45eb-8709-64ba3280fc47",
+                        "id": "9a4c1ab8-14d9-407e-8575-0405944db288",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -466,10 +460,7 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": [],
-                      "options": {
-                        "formdata": {}
-                      }
+                      "formdata": []
                     },
                     "url": {
                       "raw": "{{url}}/v1/departments/{{departmentId}}",
@@ -511,7 +502,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "91393d99-2404-4064-b0b8-62e1f24add01",
+                        "id": "34c78e15-a0a0-4143-a285-ac8518551368",
                         "exec": [
                           "//status check",
                           "",
@@ -611,7 +602,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "8dd58800-317c-4d88-ba5d-86a4caef3ef0",
+                        "id": "99b3212b-551b-4678-9eb2-7daaff790a0f",
                         "exec": [
                           "//get random first name",
                           "var first_name = \"\";",
@@ -688,10 +679,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"first_name\":\"{{firstName}}\",\"second_name\":\"{{secondName}}\",\"third_name\":\"{{thirdName}}\",\"email\":\"{{email}}@antph.me\",\"status\":0,\"departmentId\":{{departmentId}}}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"first_name\":\"{{firstName}}\",\"second_name\":\"{{secondName}}\",\"third_name\":\"{{thirdName}}\",\"email\":\"{{email}}@antph.me\",\"status\":0,\"departmentId\":{{departmentId}}}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/targets",
@@ -712,7 +700,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "9f234c3b-3eb9-4117-8241-9ce4263204eb",
+                        "id": "f9435047-73d8-4bed-ab4c-d4a8f8aecfee",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -829,7 +817,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "61b94d08-db68-43e8-817c-91dc16ec391b",
+                        "id": "48bbb788-645f-4d60-b464-04a531908ae5",
                         "exec": [
                           "//status check",
                           "",
@@ -903,7 +891,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "110278a2-d04b-473c-8aa8-04b854da4957",
+                        "id": "d645261d-4904-44b9-8039-ea8db613aa4f",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1014,7 +1002,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "618a2547-4df6-46fe-b140-2808d3eed9d6",
+                        "id": "e55ada0f-bac7-4591-ad75-0496382d215c",
                         "type": "text/javascript",
                         "exec": [
                           "//get random modified first name",
@@ -1145,10 +1133,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"id\":{{targetId}},\"first_name\":\"{{modifiedFirstName}}\",\"second_name\":\"{{modifiedSecondName}}\",\"third_name\":\"{{modifiedThirdName}}\",\"email\":\"{{modifiedEmail}}@antph.me\",\"status\":1,\"departmentId\":{{departmentId}},\"situation\":{\"status\":1,\"hasVulnerabilities\":false,\"education\":0,\"rating\":10,\"lastChange\":2,\"actions\":[]}}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"id\":{{targetId}},\"first_name\":\"{{modifiedFirstName}}\",\"second_name\":\"{{modifiedSecondName}}\",\"third_name\":\"{{modifiedThirdName}}\",\"email\":\"{{modifiedEmail}}@antph.me\",\"status\":1,\"departmentId\":{{departmentId}},\"situation\":{\"status\":1,\"hasVulnerabilities\":false,\"education\":0,\"rating\":10,\"lastChange\":2,\"actions\":[]}}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/targets/{{targetId}}",
@@ -1170,7 +1155,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "2ca85e74-051d-4a25-b25c-87d8820004ca",
+                        "id": "b797bd7f-dfe9-44ee-bf2b-a14d1e386cd2",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1203,10 +1188,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": ""
                     },
                     "url": {
                       "raw": "{{url}}/v1/targets/{{targetId}}",
@@ -1248,7 +1230,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "729b8dab-fe1b-4a3e-914f-be483fc5f14f",
+                        "id": "311a1fc6-8e23-4eab-bc87-428c5e2c55fe",
                         "exec": [
                           "//status check",
                           "",
@@ -1282,10 +1264,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":0}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":0}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/education",
@@ -1306,7 +1285,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "c77a8192-f8d3-4079-bfe5-40ff4ded6c17",
+                        "id": "693bdfd0-fb0f-4272-95c9-5bfcbc976f38",
                         "exec": [
                           "//status check",
                           "",
@@ -1322,7 +1301,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "8c735a9c-7a53-4e17-aa52-b038c4c4a3fe",
+                        "id": "120d2bb7-5d9f-4f63-884f-3ebd54789426",
                         "exec": [
                           "//get random course id",
                           "",
@@ -1357,10 +1336,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":{{courseId}}}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"targets\":[{{targetId}}],\"courseId\":{{courseId}}}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/education",
@@ -1401,7 +1377,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "dc890330-c8b4-4800-83d8-f2cc62dee552",
+                        "id": "f18e2dc5-504d-43ed-a24a-1ff578ff9e81",
                         "exec": [
                           "//status check",
                           "",
@@ -1507,10 +1483,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"targets\":[{{targetId}}]}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"targets\":[{{targetId}}]}"
                     },
                     "url": {
                       "raw": "{{url}}/v1/attack",
@@ -1531,7 +1504,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "17d41e73-c4cb-470c-9e45-8184d6875af6",
+                        "id": "9b6866e7-def8-4b1a-a393-d2468be2f17b",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1656,7 +1629,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "a8898604-8005-4389-a2c7-8eed7529e8d7",
+                        "id": "b54a6afe-5adf-4525-a77f-c911ad22eac6",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1706,7 +1679,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "6ce4ea8d-c430-4b00-8317-a41fab7c4728",
+                        "id": "36c066ad-6201-4f91-8861-7cd09b2a3f7e",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1756,7 +1729,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "0316547a-6593-4096-ad08-5f141a504910",
+                        "id": "ab970245-f9f6-4a66-a27c-3f1ba8a34b45",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1806,7 +1779,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "9c80cd37-2514-4aea-b2a8-ffe1f6dcacb3",
+                        "id": "59428676-7d3b-41ba-b42a-b4a3b2b8d9fd",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1856,7 +1829,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "1d82372c-53ef-4894-b812-a10b6b6d1f6d",
+                        "id": "7fe46090-bf07-4998-91c3-b3a180a7363b",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -1932,7 +1905,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "27bcce95-d509-4d69-b78b-bac26dccacd8",
+                        "id": "ddb218a2-f221-4a05-a19f-cb280c4d5593",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -2010,7 +1983,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "7381ed0e-a556-4640-a7b6-f2671771240e",
+                        "id": "d7ef5593-8e54-48a0-a244-61956bce12fe",
                         "type": "text/javascript",
                         "exec": [
                           "//get random department name",
@@ -2046,10 +2019,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"name\": \"{{departmentName}}\"}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"name\": \"{{departmentName}}\"}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/departments",
@@ -2070,7 +2040,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "939c06f2-a21b-449c-8526-b302ff5c4a65",
+                        "id": "70fee3f9-7cd6-4671-ab8a-6d7247330e8b",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -2163,7 +2133,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "021f77e3-3643-499e-b79f-644ddb97cf96",
+                        "id": "1f4e20a8-356b-42a0-893f-7b2f0d2926b5",
                         "exec": [
                           "//status check",
                           "",
@@ -2231,7 +2201,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "fa03c2e9-1891-44c3-b72c-ed9689bdcfee",
+                        "id": "3b33203f-acb2-4ca5-8225-7dffbc8d82fd",
                         "type": "text/javascript",
                         "exec": [
                           "//get random modified department name",
@@ -2252,7 +2222,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "63ed2433-251d-4d5d-8274-74060aacf0e4",
+                        "id": "e45df896-8e5c-4faf-8efc-3997baa8add7",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -2333,10 +2303,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"id\":{{departmentId}},\"name\":\"{{modifiedDepartmentName}}\"}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/departments/{{departmentId}}",
@@ -2358,7 +2325,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "491fb9a0-c97f-484a-a5bc-a0d44082440c",
+                        "id": "996a09b9-68ec-47bc-9116-7c061fa1c92e",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -2390,10 +2357,7 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": [],
-                      "options": {
-                        "formdata": {}
-                      }
+                      "formdata": []
                     },
                     "url": {
                       "raw": "{{url}}/v2/departments/{{departmentId}}",
@@ -2435,7 +2399,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "249bfe84-b854-4150-9de8-3b819769afd7",
+                        "id": "a56ab9b2-8be3-41c1-9011-d0baab98751d",
                         "exec": [
                           "//status check",
                           "",
@@ -2560,7 +2524,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
+                        "id": "e273fb53-b385-44cc-9775-bcb470046cd0",
                         "exec": [
                           "//get random first name",
                           "",
@@ -2689,10 +2653,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"fullName\":\"{{firstName}} {{secondName}} {{thirdName}}\",\"firstName\":\"{{firstName}}\",\"secondName\":\"{{secondName}}\",\"thirdName\":\"{{thirdName}}\",\"position\":\"{{position}}\",\"email\":\"{{email}}@antph.me\",\"department\":{\"id\":{{departmentId}},\"name\":\"{{departmentName}}\"},\"marks\":[\"{{mark_name_1}}\", \"{{mark_name_2}}\", \"{{mark_name_3}}\", \"{{mark_name_4}}\"]}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"fullName\":\"{{firstName}} {{secondName}} {{thirdName}}\",\"firstName\":\"{{firstName}}\",\"secondName\":\"{{secondName}}\",\"thirdName\":\"{{thirdName}}\",\"position\":\"{{position}}\",\"email\":\"{{email}}@antph.me\",\"department\":{\"id\":{{departmentId}},\"name\":\"{{departmentName}}\"},\"marks\":[\"{{mark_name_1}}\", \"{{mark_name_2}}\", \"{{mark_name_3}}\", \"{{mark_name_4}}\"]}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/targets",
@@ -2713,7 +2674,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "4784948e-ea23-4fe9-9e3a-d0a9ee259df8",
+                        "id": "b7c7c70a-c2e9-4674-aa33-6d2dc7c98b50",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -2855,7 +2816,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "aa948c25-ea67-4082-b461-4416d5c1dec6",
+                        "id": "b8086eca-3171-4021-9cc7-b6c4a374f8d7",
                         "exec": [
                           "//status check",
                           "",
@@ -2934,7 +2895,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "d763e9b5-3080-46a3-b35a-fb8780def4d1",
+                        "id": "d18c1c23-3a62-4fd7-bf97-792c121b15b3",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -2966,10 +2927,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": ""
                     },
                     "url": {
                       "raw": "{{url}}/v2/targets/{{targetId}}",
@@ -3011,7 +2969,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "796d57dc-0a0c-4d0d-a861-bbaf7416c02f",
+                        "id": "f051a2bc-69a2-4dfd-9a20-b53da71cf8af",
                         "type": "text/javascript",
                         "exec": [
                           "//get random attack name",
@@ -3084,7 +3042,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "c057c18c-6df2-4356-988a-658c916a3d65",
+                        "id": "c1238a25-7425-4a73-b790-5b1279694f04",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3239,10 +3197,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"name\":\"{{attackName}}\",\"subject\":\"{{subjectName}}\",\"fromName\":\"{{senderName}}\",\"from\":\"{{senderEmail}}\",\"domain\":\"antiphish.ru\",\"domainInLinks\":null,\"text\":\"<p>{{emailText}}</p>\",\"targetsCount\":null,\"sendAttachment\":true,\"attachment\":{\"id\":22,\"name\":\"blank\",\"type\":\"xlsx\"},\"attachmentFakeName\":null,\"phishingPage\":{\"id\":3,\"title\":\"Аутенфикация Atlassian JIRA\"},\"finalPage\":null,\"template\":null,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"name\":\"{{attackName}}\",\"subject\":\"{{subjectName}}\",\"fromName\":\"{{senderName}}\",\"from\":\"{{senderEmail}}\",\"domain\":\"antiphish.ru\",\"domainInLinks\":null,\"text\":\"<p>{{emailText}}</p>\",\"targetsCount\":null,\"sendAttachment\":true,\"attachment\":{\"id\":22,\"name\":\"blank\",\"type\":\"xlsx\"},\"attachmentFakeName\":null,\"phishingPage\":{\"id\":3,\"title\":\"Аутенфикация Atlassian JIRA\"},\"finalPage\":null,\"template\":null,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns",
@@ -3263,7 +3218,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "05bf2acc-f64a-4ecd-b279-0815b8b65e16",
+                        "id": "abe9b634-332b-4662-8faa-50dd0a0e57cd",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3409,7 +3364,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "785f543e-d20e-41f8-b022-b48b973862db",
+                        "id": "1613e8e7-05d9-46d1-ac65-b72cb2a6f8c7",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3470,7 +3425,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "cf35a2d0-e4b2-4a4d-a55b-2b7a31dbf86e",
+                        "id": "43d4fc9e-af24-4dee-8fe2-51a6e8b67bb5",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3501,10 +3456,7 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": [],
-                      "options": {
-                        "formdata": {}
-                      }
+                      "formdata": []
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/delete?deleteStatistics=0",
@@ -3546,10 +3498,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/restore",
@@ -3571,7 +3520,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "0a5b3568-88fc-471d-8e36-5d0db2502647",
+                        "id": "2fe42ae5-e636-4bd9-b9f5-d81e12911ff2",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3603,10 +3552,7 @@
                     ],
                     "body": {
                       "mode": "formdata",
-                      "formdata": [],
-                      "options": {
-                        "formdata": {}
-                      }
+                      "formdata": []
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/delete?deleteStatistics=1",
@@ -3655,7 +3601,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "3f9b9925-6aa5-4fa0-b76c-83685ae4c0d6",
+                        "id": "d1ec77cc-cdd8-4552-b201-d212792279f8",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3706,7 +3652,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "ece0bceb-a994-40f6-a678-73f161ce8b83",
+                        "id": "b3c6fffd-e8e6-46b6-b937-35c528577d88",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3757,7 +3703,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "bf175b36-a63a-4b0a-9e4b-da1a92be28c7",
+                        "id": "97d8995f-fd1e-4a00-99ec-88ef70d7064d",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3808,7 +3754,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "6954334d-007f-4ddd-9ba2-f11fc8393831",
+                        "id": "bd11bb12-a4f3-4f2d-8acf-fe1548e5caa2",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3878,7 +3824,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "aefa52ff-5486-4058-98cc-7e8f08b9f8a3",
+                        "id": "b302cf66-6eea-489b-8fe3-48a12065a3fa",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -3948,7 +3894,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "729b8dab-fe1b-4a3e-914f-be483fc5f14f",
+                        "id": "01f6c35a-c51e-469f-90ed-bec5f74b13f6",
                         "exec": [
                           "//status check",
                           "",
@@ -3964,7 +3910,7 @@
                     {
                       "listen": "prerequest",
                       "script": {
-                        "id": "493b4fee-e0ee-454d-bdac-f0887e77488c",
+                        "id": "0ec4f3b6-89d8-4804-8f5a-b600c3c7eb93",
                         "exec": [
                           "//get random course id",
                           "",
@@ -3996,10 +3942,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"courseId\":{{courseId}},\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"courseId\":{{courseId}},\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/learning/sendToTraining",
@@ -4021,7 +3964,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "729b8dab-fe1b-4a3e-914f-be483fc5f14f",
+                        "id": "711bed0d-7d25-40ed-96af-957a10e42943",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -4052,10 +3995,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\"courseId\":0,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": "{\"courseId\":0,\"selectedData\":{\"targets\":{\"{{departmentId}}\":[{{targetId}}]}}}"
                     },
                     "url": {
                       "raw": "{{url}}/v2/learning/sendToTraining",
@@ -4077,7 +4017,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "1f4049b3-3b2b-4ad3-aed3-7503849d5e4c",
+                        "id": "98bcd475-4852-45ce-bfae-9b8e4fc3899d",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -4127,7 +4067,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "129bdf3b-bb6f-4ac1-8c95-1d58fda33a1f",
+                        "id": "08e160d6-3eb1-4b09-820a-77f0cbb96e13",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -4177,7 +4117,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "cbb8dfac-11f5-44a1-b287-765c7900efd4",
+                        "id": "9b1bc096-adc6-4c1c-a6dd-10e56e6253b5",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -4227,1101 +4167,7 @@
             },
             {
               "name": "tests",
-              "item": [
-                {
-                  "name": "AN-1915",
-                  "item": [
-                    {
-                      "name": "Create Department",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "27bcce95-d509-4d69-b78b-bac26dccacd8",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 201.\", function () {",
-                              "    ",
-                              "    pm.response.to.have.status(201);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function() {",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              "",
-                              "//get departmentId to variable",
-                              "",
-                              "try {",
-                              "    ",
-                              "    pm.environment.set(\"departmentId\", pm.response.json().id);",
-                              "    ",
-                              "} catch(e) {",
-                              "    ",
-                              "    console.log(e);",
-                              "    ",
-                              "}",
-                              "",
-                              "//department properties check",
-                              "",
-                              "var departmentScheme = {",
-                              "    ",
-                              "    \"type\": \"object\",",
-                              "    ",
-                              "    \"required\" : [\"id\", \"name\"],",
-                              "    ",
-                              "    \"properties\": {",
-                              "        ",
-                              "        \"id\": {\"type\": \"integer\"},",
-                              "        \"name\": {\"type\": \"string\"},",
-                              "        \"rating\": {\"type\": \"null\"},",
-                              "        \"lastChange\": {\"type\": \"null\"},",
-                              "        \"targetsCount\": {\"type\": \"integer\"},",
-                              "        \"searchTargets\": {\"type\": \"integer\"},",
-                              "        \"newTargets\": {\"type\": \"integer\"},",
-                              "        \"failedTargets\": {\"type\": \"integer\"},",
-                              "        \"vulnTargets\": {\"type\": \"integer\"}",
-                              "        ",
-                              "    }   ",
-                              "    ",
-                              "};",
-                              "",
-                              "var department = JSON.parse(responseBody);",
-                              "",
-                              "pm.test (\"Department properties are correct.\", function() {",
-                              "    ",
-                              "    var SchemeIsCorrect = tv4.validate(department, departmentScheme);",
-                              "        ",
-                              "    pm.expect(SchemeIsCorrect).to.be.true;",
-                              "    ",
-                              "});",
-                              "",
-                              "//check department name",
-                              "",
-                              "pm.test(\"Department Name is correct.\", function(){",
-                              "    ",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentName\"));",
-                              "    ",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "7381ed0e-a556-4640-a7b6-f2671771240e",
-                            "exec": [
-                              "//get random department name",
-                              "",
-                              "var department_name = \"Отдел \";",
-                              "var department_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,./?\";",
-                              "",
-                              "    for( var i=0; i < 15; i++ ) {",
-                              "    ",
-                              "        department_name += department_name_charset.charAt(Math.floor(Math.random() * department_name_charset.length));",
-                              "    ",
-                              "    }",
-                              "    ",
-                              "postman.setEnvironmentVariable(\"departmentName\", department_name);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"name\": \"{{departmentName}}\"}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/departments",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "departments"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Create Target",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 201.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(201);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              "",
-                              "//get targetId to variable",
-                              "",
-                              "try {",
-                              "    ",
-                              "    pm.environment.set(\"targetId\", pm.response.json().id);",
-                              "    ",
-                              "} catch(e) {",
-                              "    ",
-                              "    console.log(e);",
-                              "    ",
-                              "}",
-                              "",
-                              "//target properties check",
-                              "",
-                              "var targetScheme = {",
-                              "    ",
-                              "    \"type\": \"object\",",
-                              "    ",
-                              "    \"required\" : [\"id\", \"fullName\", \"firstName\", \"secondName\", \"email\", \"department\"],",
-                              "    ",
-                              "    \"properties\": {",
-                              "        ",
-                              "        \"id\": {\"type\": \"integer\"},",
-                              "        \"fullName\": {\"type\": \"string\"},",
-                              "        \"firstName\": {\"type\": \"string\"},",
-                              "        \"secondName\": {\"type\": \"string\"},",
-                              "        \"thirdName\": {\"type\": \"string\"},",
-                              "        \"position\": {\"type\": \"string\"},",
-                              "        \"email\": {\"type\": \"string\"},",
-                              "        \"status\": {\"type\": \"null\"},",
-                              "        \"department\": {",
-                              "            ",
-                              "            \"type\": \"object\",",
-                              "            \"properties\": {",
-                              "                ",
-                              "              \"id\": {\"type\": \"integer\"},",
-                              "              \"name\": {\"type\": \"string\"}",
-                              "              ",
-                              "            }",
-                              "            ",
-                              "        },",
-                              "        ",
-                              "        \"situation\": {",
-                              "            ",
-                              "            \"type\": \"object\",",
-                              "            \"properties\": {",
-                              "                ",
-                              "                \"status\": {\"type\": \"null\"},",
-                              "                \"hasVulnerabilities\": {\"type\": \"boolean\"},",
-                              "                \"education\": {\"type\": \"integer\"},",
-                              "                \"rating\": {\"type\": \"null\"},",
-                              "                \"lastChange\": {\"type\": \"null\"},",
-                              "                \"actions\": {",
-                              "                    ",
-                              "                    \"type\": \"array\",",
-                              "                    \"items\": {\"type\": \"string\"}",
-                              "                    ",
-                              "                }",
-                              "                ",
-                              "            }",
-                              "            ",
-                              "        },",
-                              "        ",
-                              "        \"marks\": {",
-                              "            ",
-                              "            \"type\": \"array\",",
-                              "            \"items\": {\"type\": \"string\"}",
-                              "            ",
-                              "        }",
-                              "        ",
-                              "    }",
-                              "    ",
-                              "};",
-                              "",
-                              "var target = JSON.parse(responseBody);",
-                              "",
-                              "pm.test (\"Target properties are correct.\", function() {",
-                              "    ",
-                              "    var SchemeIsCorrect = tv4.validate(target, targetScheme);",
-                              "        ",
-                              "    pm.expect(SchemeIsCorrect).to.be.true;",
-                              "    ",
-                              "});",
-                              "",
-                              "//check target fullName, firstName, secondName, thirdName, position, email, department, marks",
-                              "",
-                              "pm.test(\"Target is correct.\", function(){",
-                              "    ",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"firstName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"secondName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"thirdName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"position\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentName\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_1\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_2\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_3\"));",
-                              "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"mark_name_4\"));",
-                              "   ",
-                              "});",
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              "//get random first name",
-                              "",
-                              "var first_name = \"\";",
-                              "var first_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 15; i++ ) {",
-                              "        first_name += first_name_charset.charAt(Math.floor(Math.random() * first_name_charset.length));",
-                              "    }",
-                              "    ",
-                              "postman.setEnvironmentVariable(\"firstName\", first_name);",
-                              "",
-                              "//get random second name",
-                              "",
-                              "var second_name = \"\";",
-                              "var second_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 15; i++ ) {",
-                              "    ",
-                              "        second_name += second_name_charset.charAt(Math.floor(Math.random() * second_name_charset.length));",
-                              "    ",
-                              "    }",
-                              "    ",
-                              "postman.setEnvironmentVariable(\"secondName\", second_name);",
-                              "",
-                              "//get random third name",
-                              "",
-                              "var third_name = \"\";",
-                              "var third_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 15; i++ ) {",
-                              "    ",
-                              "        third_name += third_name_charset.charAt(Math.floor(Math.random() * third_name_charset.length));",
-                              "    ",
-                              "    }",
-                              "",
-                              "postman.setEnvironmentVariable(\"thirdName\", third_name);",
-                              "",
-                              "//get random email",
-                              "",
-                              "var email_name = \"A.b.C.d\";",
-                              "var email_name_charset = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-_\";",
-                              "",
-                              "    for( var i=0; i < 15; i++ ) {",
-                              "    ",
-                              "        email_name += email_name_charset.charAt(Math.floor(Math.random() * email_name_charset.length));",
-                              "    ",
-                              "    }",
-                              "",
-                              "postman.setEnvironmentVariable(\"email\", email_name);",
-                              "",
-                              "//get random position",
-                              "",
-                              "var position_name = \"Менеджер \";",
-                              "var position_name_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 15; i++ ) {",
-                              "    ",
-                              "        position_name += position_name_charset.charAt(Math.floor(Math.random() * position_name_charset.length));",
-                              "    ",
-                              "    }",
-                              "",
-                              "postman.setEnvironmentVariable(\"position\", position_name);",
-                              "",
-                              "//get random marks",
-                              "",
-                              "var mark_name_1 = \"\";",
-                              "var mark_name_1_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 3; i++ ) {",
-                              "    ",
-                              "        mark_name_1 += mark_name_1_charset.charAt(Math.floor(Math.random() * mark_name_1_charset.length));",
-                              "    ",
-                              "    }",
-                              "    ",
-                              "var mark_name_2 = \"\";",
-                              "var mark_name_2_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 9; i++ ) {",
-                              "    ",
-                              "        mark_name_2 += mark_name_2_charset.charAt(Math.floor(Math.random() * mark_name_2_charset.length));",
-                              "    ",
-                              "    }",
-                              "    ",
-                              "var mark_name_3 = \"\";",
-                              "var mark_name_3_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 5; i++ ) {",
-                              "    ",
-                              "        mark_name_3 += mark_name_3_charset.charAt(Math.floor(Math.random() * mark_name_3_charset.length));",
-                              "    ",
-                              "    }",
-                              "    ",
-                              "var mark_name_4 = \"\";",
-                              "var mark_name_4_charset = \"АБВГДЕЁЖЗИЙКЛМОПРТУФХЦЧШЩЪЫЬЭЮЯабвгеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_+-=;':,.<>/?\";",
-                              "",
-                              "    for( var i=0; i < 1; i++ ) {",
-                              "    ",
-                              "        mark_name_4 += mark_name_4_charset.charAt(Math.floor(Math.random() * mark_name_4_charset.length));",
-                              "    ",
-                              "    }",
-                              "",
-                              "postman.setEnvironmentVariable(\"mark_name_1\", mark_name_1);",
-                              "postman.setEnvironmentVariable(\"mark_name_2\", mark_name_2);",
-                              "postman.setEnvironmentVariable(\"mark_name_3\", mark_name_3);",
-                              "postman.setEnvironmentVariable(\"mark_name_4\", mark_name_4);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"fullName\":\"{{firstName}} {{secondName}} {{thirdName}}\",\"firstName\":\"{{firstName}}\",\"secondName\":\"{{secondName}}\",\"thirdName\":\"{{thirdName}}\",\"position\":\"{{position}}\",\"email\":\"{{email}}@antph.me\",\"department\":{\"id\":{{departmentId}},\"name\":\"{{departmentName}}\"},\"marks\":[\"{{mark_name_1}}\", \"{{mark_name_2}}\", \"{{mark_name_3}}\", \"{{mark_name_4}}\"]}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/targets",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "targets"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Try to  get link. No Appointment, No self-appointment courses",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 422.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(422);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{eduUrl}}/edu/auth",
-                          "host": [
-                            "{{eduUrl}}"
-                          ],
-                          "path": [
-                            "edu",
-                            "auth"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Get Course List",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "try {",
-                              "    pm.environment.set(\"courseId\", pm.response.json()[0].id);",
-                              "} catch(e) {",
-                              "    ",
-                              "    console.log(e);",
-                              "    ",
-                              "}"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/courses?page=1&per-page=20",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "courses"
-                          ],
-                          "query": [
-                            {
-                              "key": "page",
-                              "value": "1"
-                            },
-                            {
-                              "key": "per-page",
-                              "value": "20"
-                            }
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Get Course",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "try {",
-                              "    pm.environment.set(\"courseName\", pm.response.json().name);",
-                              "    pm.environment.set(\"courseStatus\", pm.response.json().status);",
-                              "    pm.environment.set(\"coursePass_score\", pm.response.json().pass_score);",
-                              "    pm.environment.set(\"courseAllow_self_appointment\", pm.response.json().allow_self_appointment);",
-                              "} catch(e) {",
-                              "    ",
-                              "    console.log(e);",
-                              "    ",
-                              "}"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/courses/{{courseId}}",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "courses",
-                            "{{courseId}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Edit Course (Add self_appointment)",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 200.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(200);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              "pm.environment.set(\"courseAllow_self_appointment\", true);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"id\":{{courseId}},\"name\":\"{{courseName}}\",\"status\":{{courseStatus}},\"pass_score\":{{coursePass_score}},\"allow_self_appointment\":{{courseAllow_self_appointment}},\"prev_stat\":null,\"prev_dynamic\":null}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/courses/{{courseId}}",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "courses",
-                            "{{courseId}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Try to  get link. Self-appointment course only",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 200.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(200);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{eduUrl}}/edu/auth",
-                          "host": [
-                            "{{eduUrl}}"
-                          ],
-                          "path": [
-                            "edu",
-                            "auth"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Edit Course (Remove self_appointment)",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "a595613a-7dc8-4043-ba06-4d3536ac9602",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 200.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(200);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              "",
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "cbd04353-a061-45a3-b1b2-10d8b73df9db",
-                            "exec": [
-                              "pm.environment.set(\"courseAllow_self_appointment\", false);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"id\":{{courseId}},\"name\":\"{{courseName}}\",\"status\":{{courseStatus}},\"pass_score\":{{coursePass_score}},\"allow_self_appointment\":{{courseAllow_self_appointment}},\"prev_stat\":null,\"prev_dynamic\":null}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/courses/{{courseId}}",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "courses",
-                            "{{courseId}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Try to  get link. No Appointment, No self-appointment courses Copy",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 422.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(422);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{eduUrl}}/edu/auth",
-                          "host": [
-                            "{{eduUrl}}"
-                          ],
-                          "path": [
-                            "edu",
-                            "auth"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Send to  training",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "c278bfbf-1ca3-4e72-943f-fd2ec60a6634",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 200.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(200);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "bdf2f1d2-0c5a-448b-90c2-ec351d0d6e12",
-                            "exec": [
-                              "pm.environment.set(\"courseAllow_self_appointment\", false);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"courseId\":{{courseId}},\"selectedData\":{\"search\":[\"\"],\"all\":false,\"departments\":[{{departmentId}}],\"departmentsUsed\":[],\"targets\":[],\"unselectedDepartments\":[],\"unselectedTargets\":[],\"courses\":[],\"selectedCount\":{\"targets\":1,\"departments\":1},\"$promise\":{},\"$resolved\":true},\"learningConfig\":{\"timeValue\":3,\"timePeriod\":\"day\"}}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/v2/learning/sendToTraining",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "v2",
-                            "learning",
-                            "sendToTraining"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Try to  get link. Target on training",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "249bfe84-b854-4150-9de8-3b819769afd7",
-                            "exec": [
-                              "//status check",
-                              "",
-                              "pm.test(\"Status code is 200.\", function () {",
-                              "",
-                              "    pm.response.to.have.status(200);",
-                              "    ",
-                              "});",
-                              "",
-                              "//response content-type check",
-                              "",
-                              "pm.test(\"Response is json.\", function(){",
-                              "    ",
-                              "    pm.response.to.be.json;",
-                              "    ",
-                              "});",
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        },
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "0525ff0c-d0ae-40f7-ac99-456898fd3c79",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "{{token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\"username\":\"{{email}}@antph.me\",\"token\":\"\"}",
-                          "options": {
-                            "raw": {}
-                          }
-                        },
-                        "url": {
-                          "raw": "{{eduUrl}}/edu/auth",
-                          "host": [
-                            "{{eduUrl}}"
-                          ],
-                          "path": [
-                            "edu",
-                            "auth"
-                          ]
-                        }
-                      },
-                      "response": []
-                    }
-                  ],
-                  "protocolProfileBehavior": {},
-                  "_postman_isSubFolder": true
-                }
-              ],
+              "item": [],
               "protocolProfileBehavior": {},
               "_postman_isSubFolder": true
             }
@@ -5341,7 +4187,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "d1bb26c5-1189-480c-ac72-7562ebeb5437",
+                        "id": "6ccee7d7-1884-4c79-a351-f017d0dd84d0",
                         "exec": [
                           "//status check",
                           "",
@@ -5380,10 +4226,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": ""
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/start",
@@ -5406,7 +4249,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "d089e12c-2b33-4140-92ef-9f0bc936d757",
+                        "id": "ac9218fb-6ec2-4593-908d-e0e7c41836ba",
                         "exec": [
                           "//status check",
                           "",
@@ -5442,10 +4285,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "",
-                      "options": {
-                        "raw": {}
-                      }
+                      "raw": ""
                     },
                     "url": {
                       "raw": "{{url}}/v2/campaigns/{{attackId}}/pause",
@@ -5485,7 +4325,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "776e5e0d-7da9-4040-90bf-c41290cb6543",
+                    "id": "ba182fa0-de12-47a7-81ac-4d6d69970952",
                     "type": "text/javascript",
                     "exec": [
                       "//status check",
@@ -5546,7 +4386,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "816ce74c-da11-46c0-b758-3010ff44d14b",
+                        "id": "828ccf38-0990-43e4-afef-c9438940ffde",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -5596,7 +4436,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "139f435c-6f46-43b1-b641-d88d368336c6",
+                        "id": "1241e49d-ecde-4326-98a9-7adbb54bb12f",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -5646,7 +4486,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "d65f8fa2-9d15-49a9-a5aa-7705462385d8",
+                        "id": "9099d618-0c3a-40ad-8f35-990db44d02c8",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -5696,7 +4536,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "300394ed-c1a1-4409-b3d0-07cf65e8e143",
+                        "id": "806e936f-7b32-4fdc-997b-a935c519019e",
                         "type": "text/javascript",
                         "exec": [
                           "//status check",
@@ -5788,7 +4628,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "2e9ba720-fb18-442b-b943-279676987e3d",
+                    "id": "048d93cc-6524-4589-94e3-62514656430a",
                     "type": "text/javascript",
                     "exec": [
                       "//status check",
@@ -5898,10 +4738,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"password\":\"{{userPassword}}\",\"username\":\"{{userLogin}}\"}",
-                  "options": {
-                    "raw": {}
-                  }
+                  "raw": "{\"password\":\"{{userPassword}}\",\"username\":\"{{userLogin}}\"}"
                 },
                 "url": {
                   "raw": "{{url}}/v2/auth",
@@ -5922,7 +4759,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "44ea3579-3061-430d-b50a-952eceaeadcb",
+                    "id": "30d78f1e-bccf-4bab-8dba-c3577a0c6ce3",
                     "type": "text/javascript",
                     "exec": [
                       "//status check",
@@ -5972,7 +4809,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "931ddfcd-7b43-4695-a0ff-4c63245e6dbb",
+                    "id": "e1296d80-6d86-4269-b287-6c3b4c9a1c19",
                     "type": "text/javascript",
                     "exec": [
                       "//status check",
@@ -6019,114 +4856,6 @@
           ],
           "protocolProfileBehavior": {},
           "_postman_isSubFolder": true
-        },
-        {
-          "name": "Certs",
-          "item": [
-            {
-              "name": "requests",
-              "item": [
-                {
-                  "name": "Download certificate",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "id": "939c06f2-a21b-449c-8526-b302ff5c4a65",
-                        "exec": [
-                          "//status check",
-                          "",
-                          "pm.test(\"Status code is 200\", function () {",
-                          "    pm.response.to.have.status(200);",
-                          "});",
-                          "",
-                          "//response content-type check",
-                          "",
-                          "pm.test(\"Response is json.\", function() {",
-                          "    ",
-                          "    pm.response.to.be.json;",
-                          "    ",
-                          "});",
-                          "",
-                          "//department properties check",
-                          "",
-                          "var departmentSchema = {",
-                          "    ",
-                          "    \"type\": \"object\",",
-                          "    ",
-                          "    \"required\" : [\"id\", \"name\"],",
-                          "    ",
-                          "    \"properties\": {",
-                          "        ",
-                          "            \"id\": {\"type\": \"integer\"},",
-                          "            \"name\": {\"type\": \"string\"},",
-                          "            \"rating\": {\"type\": \"integer\"},",
-                          "            \"lastChange\": {\"type\": \"integer\"},",
-                          "            \"targetsCount\": {\"type\": \"integer\"},",
-                          "            \"searchTargets\": {\"type\": \"integer\"},",
-                          "            \"newTargets\": {\"type\": \"integer\"},",
-                          "            \"failedTargets\": {\"type\": \"integer\"},",
-                          "            \"vulnTargets\": {\"type\": \"integer\"}",
-                          "        ",
-                          "        }   ",
-                          "    };",
-                          "",
-                          "var department = JSON.parse(responseBody);",
-                          "",
-                          "pm.test (\"Department properties are correct.\", function() {",
-                          "    ",
-                          "    var SchemeIsCorrect = tv4.validate(department, departmentSchema);",
-                          "        ",
-                          "    pm.expect(SchemeIsCorrect).to.be.true;",
-                          "    ",
-                          "});",
-                          "",
-                          "//department name and id check",
-                          "",
-                          "pm.test(\"Department Name and ID are correct.\", function(){",
-                          "    ",
-                          "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentName\"));",
-                          "    pm.expect(pm.response.text()).to.include(pm.variables.get(\"departmentId\"));",
-                          "    ",
-                          "});"
-                        ],
-                        "type": "text/javascript"
-                      }
-                    }
-                  ],
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "{{token}}"
-                      }
-                    ],
-                    "url": {
-                      "raw": "{{url}}/v2/certs/51/download",
-                      "host": [
-                        "{{url}}"
-                      ],
-                      "path": [
-                        "v2",
-                        "certs",
-                        "51",
-                        "download"
-                      ]
-                    }
-                  },
-                  "response": []
-                }
-              ],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            }
-          ],
-          "protocolProfileBehavior": {},
-          "_postman_isSubFolder": true
         }
       ],
       "protocolProfileBehavior": {}
@@ -6146,7 +4875,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                        "id": "ff5d4620-b23a-49fe-9b8c-c8df694c16ed",
                         "type": "text/javascript",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
@@ -6190,7 +4919,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "2221f7e8-a4a6-4b10-af34-0502d6d6e7c6",
+                        "id": "b246b0e7-09be-43c6-a8ce-64a633a0cd02",
                         "type": "text/javascript",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
@@ -6235,7 +4964,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "9c6f1d4c-6667-4b78-8d68-08aedcc5b66d",
+                        "id": "7248f94b-84ce-4541-aacb-a31818c83a90",
                         "type": "text/javascript",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
@@ -6289,112 +5018,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Email-attak template",
-          "item": [
-            {
-              "name": "requests",
-              "item": [],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "tests",
-              "item": [],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "List of Templates",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "fff35163-0481-46a4-9802-117cb02cb7d2",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Status code is 200\", function () {",
-                      "    pm.response.to.have.status(200);",
-                      "});",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{url}}/manage/templates",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "manage",
-                    "templates"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "Template's information",
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "9a8f8de1-6c53-44c0-8580-30a56e01c338",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Status code is 200\", function () {",
-                      "    pm.response.to.have.status(200);",
-                      "});",
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "request": {
-                "auth": {
-                  "type": "bearer",
-                  "bearer": [
-                    {
-                      "key": "token",
-                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{url}}/manage/templates/4",
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "path": [
-                    "manage",
-                    "templates",
-                    "4"
-                  ]
-                }
-              },
-              "response": []
-            }
-          ],
-          "protocolProfileBehavior": {},
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Final Page",
           "item": [
             {
@@ -6406,7 +5029,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "8a987357-4b80-4212-8b36-5c1b155069c8",
+                        "id": "a962ac10-e5bb-4bc6-a4d2-2945d5375db5",
                         "type": "text/javascript",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
@@ -6450,7 +5073,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "5c7a899e-3e60-47e0-8705-0759b357b63d",
+                        "id": "5bb9cc31-833d-4d06-afc4-9b4217ae9a46",
                         "type": "text/javascript",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
@@ -6514,7 +5137,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "0d9a032e-924b-4219-942d-67d2eac0cf94",
+                        "id": "3575b9a4-162d-4b2b-a00f-dc6ae7af4621",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
                           "    pm.response.to.have.status(200);",
@@ -6557,7 +5180,7 @@
                     {
                       "listen": "test",
                       "script": {
-                        "id": "f3024b28-ae1c-4b0b-a1fb-88d22af1d953",
+                        "id": "98aff4b3-283c-4e6d-9712-29ce5617debd",
                         "type": "text/javascript",
                         "exec": [
                           "pm.test(\"Status code is 200\", function () {",
@@ -6610,263 +5233,215 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Cert",
+          "name": "Email-attak template",
           "item": [
+            {
+              "name": "requests",
+              "item": [],
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "tests",
+              "item": [],
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "List of Templates",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "54ffc06a-feef-4e5b-ae08-5c431b89f740",
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/manage/templates",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "manage",
+                    "templates"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Template's information",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "4d145db2-45c6-4c63-af88-5df544eb44c4",
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});",
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/manage/templates/4",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "manage",
+                    "templates",
+                    "4"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "protocolProfileBehavior": {},
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Debug",
+          "item": [
+            {
+              "name": "requests",
+              "item": [
+                {
+                  "name": "Download",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "User-Agent",
+                        "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "key": "Accept-Language",
+                        "value": "en-US,en;q=0.5"
+                      },
+                      {
+                        "key": "X-Csrf-Token",
+                        "value": "emr-VCgUJY2VWm75cF4HeUiaIBMP2jq3KLf3fmi_Fbw7CMgjemFG6KMFQ8odNmIxeNhoRHayQOFR7acLEPVyhA=="
+                      },
+                      {
+                        "key": "Enable-Session",
+                        "value": "1"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "text/csv",
+                        "disabled": true
+                      },
+                      {
+                        "key": "Origin",
+                        "value": "http://mng.local:8080"
+                      },
+                      {
+                        "key": "Connection",
+                        "value": "keep-alive"
+                      },
+                      {
+                        "key": "Cookie",
+                        "value": "PHPSESSID=p1f4cfm5k9qhagpbtteq29h6c9; instance=1; langCode=ru"
+                      },
+                      {
+                        "key": "Pragma",
+                        "value": "no-cache"
+                      },
+                      {
+                        "key": "Cache-Control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"instances\": [\n        1,\n        2\n    ]\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "http://mng.local:8080/v1/debug/1,a/download",
+                      "protocol": "http",
+                      "host": [
+                        "mng",
+                        "local"
+                      ],
+                      "port": "8080",
+                      "path": [
+                        "v1",
+                        "debug",
+                        "1,a",
+                        "download"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ],
+              "protocolProfileBehavior": {},
+              "_postman_isSubFolder": true
+            },
             {
               "name": "tests",
               "item": [
                 {
-                  "name": "AN-2683",
+                  "name": "AN-1336",
                   "item": [
                     {
-                      "name": "Validate certificate form",
+                      "name": "Test status",
                       "event": [
                         {
                           "listen": "test",
                           "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                            "exec": [
-                              "pm.test(\"Status code is 422\", function () {",
-                              "    pm.response.to.have.status(422);",
-                              "});",
-                              "",
-                              "['file', 'name', 'global_id'].forEach(function(field1) {",
-                              "    pm.test(\"Field \" + field1 + \" correct validated\", function () {",
-                              "        var fields = [];",
-                              "        pm.response.json().forEach(function(field2) {",
-                              "            fields.push(field2.field);",
-                              "        });",
-                              "        pm.expect(fields.includes(field1)).to.eql(true);",
-                              "    });",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                          "mode": "formdata",
-                          "formdata": [
-                            {
-                              "key": "file",
-                              "type": "file",
-                              "src": "/home/user/Downloads/week_3.html",
-                              "disabled": true
-                            },
-                            {
-                              "key": "global_id",
-                              "value": "1234567890",
-                              "type": "text",
-                              "disabled": true
-                            },
-                            {
-                              "key": "name",
-                              "value": "Education certificate",
-                              "type": "text",
-                              "disabled": true
-                            }
-                          ],
-                          "options": {
-                            "raw": {
-                              "language": "json"
-                            }
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/manage/certs",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "manage",
-                            "certs"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Create first cert",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                            "exec": [
-                              "pm.test(\"Status code is 201\", function () {",
-                              "    pm.response.to.have.status(201);",
-                              "});",
-                              "",
-                              "['id', 'name', 'updated', 'users'].forEach(function(item) {",
-                              "    pm.test(\"Key \" + item + \" exists!\", function () {",
-                              "        var jsonData = pm.response.json();",
-                              "        pm.expect(item in jsonData).to.eql(true);",
-                              "    });",
-                              "});",
-                              "",
-                              "pm.environment.set(\"first_cert_id\", pm.response.json()['id']);",
-                              "",
-                              "function pausecomp(millis)",
-                              " {",
-                              "  var date = new Date();",
-                              "  var curDate = null;",
-                              "  do { curDate = new Date(); }",
-                              "  while(curDate-date < millis);",
-                              "}",
-                              "",
-                              "pausecomp(1000);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                          "mode": "formdata",
-                          "formdata": [
-                            {
-                              "key": "file",
-                              "type": "file",
-                              "src": "/home/user/Downloads/week_3.html"
-                            },
-                            {
-                              "key": "global_id",
-                              "value": "1234567890",
-                              "type": "text"
-                            },
-                            {
-                              "key": "name",
-                              "value": "Education certificate",
-                              "type": "text"
-                            }
-                          ],
-                          "options": {
-                            "raw": {
-                              "language": "json"
-                            }
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/manage/certs",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "manage",
-                            "certs"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Create another cert",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                            "exec": [
-                              "pm.test(\"Status code is 201\", function () {",
-                              "    pm.response.to.have.status(201);",
-                              "});",
-                              "",
-                              "pm.environment.set(\"last_cert_id\", pm.response.json()['id']);"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                          "mode": "formdata",
-                          "formdata": [
-                            {
-                              "key": "file",
-                              "type": "file",
-                              "src": "/home/user/Downloads/week_3.html"
-                            },
-                            {
-                              "key": "global_id",
-                              "value": "0987654321",
-                              "type": "text"
-                            },
-                            {
-                              "key": "name",
-                              "value": "Education certificate N2",
-                              "type": "text"
-                            }
-                          ],
-                          "options": {
-                            "raw": {
-                              "language": "json"
-                            }
-                          }
-                        },
-                        "url": {
-                          "raw": "{{url}}/manage/certs",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "manage",
-                            "certs"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "List certificates",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
+                            "id": "8bedc62e-3872-498d-a74e-ba730e3350a2",
                             "exec": [
                               "pm.test(\"Status code is 200\", function () {",
                               "    pm.response.to.have.status(200);",
-                              "});",
-                              "",
-                              "pm.test(\"Check first is first\", function () {",
-                              "    pm.expect(pm.response.json()[0]['id'] == pm.environment.get(\"first_cert_id\")).to.eql(true);",
                               "});"
                             ],
                             "type": "text/javascript"
@@ -6875,167 +5450,33 @@
                       ],
                       "request": {
                         "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
+                          "type": "noauth"
                         },
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "{{url}}/manage/certs",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "manage",
-                            "certs"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "List certificates (sort)",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                            "exec": [
-                              "pm.test(\"Status code is 200\", function () {",
-                              "    pm.response.to.have.status(200);",
-                              "});",
-                              "",
-                              "pm.test(\"Check last is first\", function () {",
-                              "    pm.expect(pm.response.json()[0]['id'] == pm.environment.get(\"last_cert_id\")).to.eql(true);",
-                              "});"
-                            ],
-                            "type": "text/javascript"
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "X-Csrf-Token",
+                            "value": "emr-VCgUJY2VWm75cF4HeUiaIBMP2jq3KLf3fmi_Fbw7CMgjemFG6KMFQ8odNmIxeNhoRHayQOFR7acLEPVyhA=="
+                          },
+                          {
+                            "key": "Cookie",
+                            "value": "PHPSESSID=p1f4cfm5k9qhagpbtteq29h6c9; instance=1; langCode=ru"
+                          },
+                          {
+                            "key": "Cache-Control",
+                            "value": "no-cache"
                           }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "GET",
-                        "header": [],
+                        ],
                         "url": {
-                          "raw": "{{url}}/manage/certs?sortBy=updated&sortReverse=true",
+                          "raw": "{{url_manage}}/v1/debug/0,1/download",
                           "host": [
-                            "{{url}}"
+                            "{{url_manage}}"
                           ],
                           "path": [
-                            "manage",
-                            "certs"
-                          ],
-                          "query": [
-                            {
-                              "key": "sortBy",
-                              "value": "updated"
-                            },
-                            {
-                              "key": "sortReverse",
-                              "value": "true"
-                            }
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Delete first cert",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                            "exec": [
-                              "pm.test(\"Status code is 204\", function () {",
-                              "    pm.response.to.have.status(204);",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                          "raw": "{{url}}/manage/certs/{{first_cert_id}}",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "manage",
-                            "certs",
-                            "{{first_cert_id}}"
-                          ]
-                        }
-                      },
-                      "response": []
-                    },
-                    {
-                      "name": "Delete last cert",
-                      "event": [
-                        {
-                          "listen": "test",
-                          "script": {
-                            "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                            "exec": [
-                              "pm.test(\"Status code is 204\", function () {",
-                              "    pm.response.to.have.status(204);",
-                              "});"
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "auth": {
-                          "type": "bearer",
-                          "bearer": [
-                            {
-                              "key": "token",
-                              "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                          "raw": "{{url}}/manage/certs/{{last_cert_id}}",
-                          "host": [
-                            "{{url}}"
-                          ],
-                          "path": [
-                            "manage",
-                            "certs",
-                            "{{last_cert_id}}"
+                            "v1",
+                            "debug",
+                            "0,1",
+                            "download"
                           ]
                         }
                       },
@@ -7044,227 +5485,6 @@
                   ],
                   "protocolProfileBehavior": {},
                   "_postman_isSubFolder": true
-                }
-              ],
-              "protocolProfileBehavior": {},
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "requests",
-              "item": [
-                {
-                  "name": "Create",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                        "exec": [
-                          "pm.test(\"Status code is 201\", function () {",
-                          "    pm.response.to.have.status(201);",
-                          "});",
-                          "",
-                          "['id', 'name', 'updated', 'users'].forEach(function(item) {",
-                          "    pm.test(\"Key \" + item + \" exists!\", function () {",
-                          "        var jsonData = pm.response.json();",
-                          "        pm.expect(item in jsonData).to.eql(true);",
-                          "    });",
-                          "});",
-                          "",
-                          "pm.environment.set(\"first_cert_id\", pm.response.json()['id']);",
-                          "",
-                          "function pausecomp(millis)",
-                          " {",
-                          "  var date = new Date();",
-                          "  var curDate = null;",
-                          "  do { curDate = new Date(); }",
-                          "  while(curDate-date < millis);",
-                          "}",
-                          "",
-                          "pausecomp(1000);"
-                        ],
-                        "type": "text/javascript"
-                      }
-                    }
-                  ],
-                  "request": {
-                    "auth": {
-                      "type": "bearer",
-                      "bearer": [
-                        {
-                          "key": "token",
-                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                          "type": "string"
-                        }
-                      ]
-                    },
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "formdata",
-                      "formdata": [
-                        {
-                          "key": "file",
-                          "type": "file",
-                          "src": "/home/user/Downloads/week_3.html"
-                        },
-                        {
-                          "key": "global_id",
-                          "value": "1234567890",
-                          "type": "text"
-                        },
-                        {
-                          "key": "name",
-                          "value": "Education certificate",
-                          "type": "text"
-                        }
-                      ],
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": {
-                      "raw": "{{url}}/manage/certs",
-                      "host": [
-                        "{{url}}"
-                      ],
-                      "path": [
-                        "manage",
-                        "certs"
-                      ]
-                    }
-                  },
-                  "response": []
-                },
-                {
-                  "name": "List",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                        "exec": [
-                          "pm.test(\"Status code is 200\", function () {",
-                          "    pm.response.to.have.status(200);",
-                          "});"
-                        ],
-                        "type": "text/javascript"
-                      }
-                    }
-                  ],
-                  "request": {
-                    "auth": {
-                      "type": "bearer",
-                      "bearer": [
-                        {
-                          "key": "token",
-                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                          "type": "string"
-                        }
-                      ]
-                    },
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "{{url}}/manage/certs",
-                      "host": [
-                        "{{url}}"
-                      ],
-                      "path": [
-                        "manage",
-                        "certs"
-                      ]
-                    }
-                  },
-                  "response": []
-                },
-                {
-                  "name": "View",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                        "exec": [
-                          "pm.test(\"Status code is 200\", function () {",
-                          "    pm.response.to.have.status(200);",
-                          "});"
-                        ],
-                        "type": "text/javascript"
-                      }
-                    }
-                  ],
-                  "request": {
-                    "auth": {
-                      "type": "bearer",
-                      "bearer": [
-                        {
-                          "key": "token",
-                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                          "type": "string"
-                        }
-                      ]
-                    },
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "{{url}}/manage/certs/{{first_cert_id}}",
-                      "host": [
-                        "{{url}}"
-                      ],
-                      "path": [
-                        "manage",
-                        "certs",
-                        "{{first_cert_id}}"
-                      ]
-                    }
-                  },
-                  "response": []
-                },
-                {
-                  "name": "Delete",
-                  "event": [
-                    {
-                      "listen": "test",
-                      "script": {
-                        "id": "ae135f16-64a8-49bb-8fd2-d8a90a329fca",
-                        "exec": [
-                          "pm.test(\"Status code is 204\", function () {",
-                          "    pm.response.to.have.status(204);",
-                          "});"
-                        ],
-                        "type": "text/javascript"
-                      }
-                    }
-                  ],
-                  "request": {
-                    "auth": {
-                      "type": "bearer",
-                      "bearer": [
-                        {
-                          "key": "token",
-                          "value": "6akCMjBHh2qcMHjwr1kkCzvUG3wYsiCJX",
-                          "type": "string"
-                        }
-                      ]
-                    },
-                    "method": "DELETE",
-                    "header": [],
-                    "url": {
-                      "raw": "{{url}}/manage/certs/{{first_cert_id}}",
-                      "host": [
-                        "{{url}}"
-                      ],
-                      "path": [
-                        "manage",
-                        "certs",
-                        "{{first_cert_id}}"
-                      ]
-                    }
-                  },
-                  "response": []
                 }
               ],
               "protocolProfileBehavior": {},
